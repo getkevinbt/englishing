@@ -13,19 +13,19 @@ import {
 } from "../routes/index.js";
 
 const corsOptions = {
-    origin: [
-        // "http://localhost:8080",
-        // "http://localhost:8081",
-        // "http://localhost:8082",
-        // "http://192.168.1.67:8080",
-        // "http://192.168.1.147:8080",
-        // "http://192.168.1.115:8080",
-        // "http://192.168.1.115:8081",
-        // "http://192.168.1.115:8082",
-        process.env.RENDER_EXTERNAL_URL,
-    ].filter(Boolean), // filter deletes undefined/null
-    optionsSuccessStatus: 200,
+    origin: process.env.RENDER_EXTERNAL_URL || [
+        "http://localhost:8080",
+        "http://localhost:8081",
+        "http://localhost:8082",
+        "http://192.168.1.67:8080",
+        "http://192.168.1.147:8080",
+        "http://192.168.1.115:8080",
+        "http://192.168.1.115:8081",
+        "http://192.168.1.115:8082",
+    ],
 };
+
+console.log(corsOptions);
 
 class Server {
     constructor() {
