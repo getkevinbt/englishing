@@ -1,0 +1,1 @@
+import{_ as t,c as o,a as r,r as s,o as a}from"./index-Bx-6Qppa.js";const c={components:{},name:"StartView"},n={class:"start_view_container"};function _(i,p,d,m,f,l){const e=s("router-view");return a(),o("div",n,[r(e)])}const v=t(c,[["render",_],["__scopeId","data-v-713df8c9"]]);export{v as default};
